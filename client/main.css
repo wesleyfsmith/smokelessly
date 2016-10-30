@@ -1,1 +1,29 @@
 /* CSS declarations go here */
+
+.splash {
+  background: url('jen2.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.red-text {
+  color: #d9534f;
+}
+
+.green-text {
+  color: #3fad46;
+}
+
+.gradient {
+  background: rgba(63,173,70,1);
+background: -moz-linear-gradient(top, rgba(63,173,70,1) 0%, rgba(54,245,67,0.01) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(63,173,70,1)), color-stop(100%, rgba(54,245,67,0.01)));
+background: -webkit-linear-gradient(top, rgba(63,173,70,1) 0%, rgba(54,245,67,0.01) 100%);
+background: -o-linear-gradient(top, rgba(63,173,70,1) 0%, rgba(54,245,67,0.01) 100%);
+background: -ms-linear-gradient(top, rgba(63,173,70,1) 0%, rgba(54,245,67,0.01) 100%);
+background: linear-gradient(to bottom, rgba(63,173,70,1) 0%, rgba(54,245,67,0.01) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3fad46', endColorstr='#36f543', GradientType=0 );
+}

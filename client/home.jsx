@@ -45,7 +45,7 @@ class Home extends React.Component {
 
     return (
       <div id="main">
-        <div className="container-fluid">
+        <div className="container-fluid splash" >
           <div className="row">
             <div className="col-md-12">
               {this.renderSpace()}
@@ -55,9 +55,9 @@ class Home extends React.Component {
                 </h1>
               </div>
 
-              <p className="text-center">
+              <h4 className="text-center">
                 Subscription vape cartridges
-              </p>
+              </h4>
               {this.renderSpace()}
             </div>
           </div>
@@ -74,7 +74,7 @@ class Home extends React.Component {
             </div>
             <div className="col-md-4">
               <p className="text-center">
-                <i className="fa fa-4x fa-ban"></i>
+                <i className="fa fa-4x fa-leaf green-text"></i>
               </p>
               <h4 className="text-center">
                 Skip the dispensary
@@ -98,7 +98,7 @@ class Home extends React.Component {
             </div>
             <div className="col-md-4">
               <p className="text-center">
-                <i className="fa fa-4x fa-heart"></i>
+                <i className="fa fa-4x fa-heart red-text"></i>
               </p>
               <h4 className="text-center">
                 Enjoy
@@ -112,7 +112,10 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className="container">
+        <div className="container-fluid gradient">
+          <div className="container">
+
+
           <div className="row">
             {this.smallerSpace()}
             <div className="col-md-12">
@@ -169,6 +172,7 @@ class Home extends React.Component {
             {this.smallerSpace()}
           </div>
         </div>
+        </div>
 
         <div className="container">
           <div className="row text-center">
@@ -177,6 +181,9 @@ class Home extends React.Component {
               <h3 className="text-center">
                 Subscription levels
               </h3>
+              <br></br>
+              <br></br>
+              <br></br>
             </div>
             <div className="col-md-3">
               <div className="panel panel-primary">
@@ -261,12 +268,13 @@ class Home extends React.Component {
           <div className="row">
             {this.smallerSpace()}
             <div className="col-md-8 col-md-offset-2">
-              <h3 className="text-center">
-                Your almost done!
-              </h3>
-              <p>
-              </p>
-              <a className="btn btn-block btn-primary">Checkout</a>
+              <div className="well well-lg">
+                <h3 className="text-center">
+                  You're almost done!
+                </h3>
+                <a className="btn btn-block btn-primary">Checkout</a>
+              </div>
+
             </div>
             {this.smallerSpace()}
           </div>
