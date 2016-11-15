@@ -3,6 +3,7 @@ import AOS from 'aos';
 import NavBar from '/client/navbar.jsx';
 import SignUp from '/client/signup.jsx';
 import Subscription from '/client/home.subscription.jsx';
+import CartridgePicker from '/client/home.cartridges.jsx';
 
 const signUpSchema = new SimpleSchema({
   email: {
@@ -27,7 +28,7 @@ class Home extends React.Component {
       offset: 200,
       duration: 600,
       easing: 'ease-in-sine',
-      delay: 100,
+      delay: 0
     });
   }
   componentDidMount() {
@@ -72,15 +73,15 @@ class Home extends React.Component {
             <div className="col-md-12">
               {this.renderSpace()}
                 <h1 className="text-center">
-                  <div data-aos-delay="200" data-aos="fade-in">More high.</div> <div data-aos-delay="500" data-aos="fade-in">Less hassle.</div>
+                  <div data-aos="fade-in">Smokelessley</div>
                 </h1>
-              <h4 className="text-center" data-aos-delay="700" data-aos="fade-in">
+              <h4 className="text-center" data-aos="fade-in">
                 Discreet
               </h4>
-              <h4 className="text-center" data-aos-delay="700" data-aos="fade-in">
+              <h4 className="text-center" data-aos="fade-in">
                 Convenient
               </h4>
-              <h4 className="text-center" data-aos-delay="700" data-aos="fade-in">
+              <h4 className="text-center" data-aos="fade-in">
                 Premium Vape Cartridges
               </h4>
               {this.renderSpace()}
@@ -96,10 +97,11 @@ class Home extends React.Component {
               <h6 data-aos="fade-up">
                 Our pure cannabis oils are selected, extracted, distilled, or mixed to produce rich concentrations of cannabinoids and terpenes. We create cleaner, safer varieties of great tasting oiis that you’ll look forward to receiving.
               </h6>
+              <hr></hr>
               <br></br>
               <br></br>
             </div>
-            <div className="col-md-4" data-aos-delay="200" data-aos="fade-in">
+            <div className="col-md-4" data-aos="fade-in">
               <p className="text-center">
                 <i className="fa fa-4x fa-leaf green-text"></i>
               </p>
@@ -110,7 +112,7 @@ class Home extends React.Component {
                 Avoid trips to shops and receive yoru subscriptions at home.
               </h6>
             </div>
-            <div className="col-md-4" data-aos-delay="400" data-aos="fade-in">
+            <div className="col-md-4" data-aos="fade-in">
               <p className="text-center">
                 <i className="fa fa-4x fa-mobile"></i>
               </p>
@@ -121,7 +123,7 @@ class Home extends React.Component {
                 Choose from a variety of California's best, solvent free cartridges.
               </h6>
             </div>
-            <div className="col-md-4" data-aos-delay="600" data-aos="fade-in">
+            <div className="col-md-4" data-aos="fade-in">
               <p className="text-center">
                 <i className="fa fa-4x fa-heart red-text"></i>
               </p>
@@ -132,7 +134,9 @@ class Home extends React.Component {
                 Customize your orders to your personal tastes.
               </h6>
             </div>
-            {this.smallerSpace()}
+            <div className="col-md-12">
+              <hr></hr>
+            </div>
           </div>
         </div>
 
@@ -147,7 +151,21 @@ class Home extends React.Component {
               <br></br>
               <Subscription/>
             </div>
-            {this.smallerSpace()}
+          </div>
+        </div>
+
+        <div className="container">
+          <div className="row text-center">
+            <div className="col-md-12">
+              <h3 className="text-center" data-aos="fade-up">
+
+              </h3>
+
+              <CartridgePicker/>
+                <br></br>
+                <br></br>
+                <br></br>
+            </div>
           </div>
         </div>
 

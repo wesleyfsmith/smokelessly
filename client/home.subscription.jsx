@@ -39,7 +39,7 @@ class Subscription extends TrackerReact(React.Component) {
     return (
       <div className="row">
         <div className="col-xs-3">
-          <a onClick={() => this.incrementSubscription(false)} className="btn btn-danger btn-block">-</a>
+          <a onClick={() => this.incrementSubscription(false)} className="btn btn-danger btn-block"><h1 style={{marginTop: '11px'}}>-</h1></a>
         </div>
         <div className="col-xs-6 text-center">
           <h4>
@@ -50,7 +50,7 @@ class Subscription extends TrackerReact(React.Component) {
           </h3>
         </div>
         <div className="col-xs-3">
-          <a onClick={() => this.incrementSubscription(true)} className="btn btn-success btn-block">+</a>
+          <a onClick={() => this.incrementSubscription(true)} className="btn btn-success btn-block"><h1 style={{marginTop: '11px'}}>+</h1></a>
         </div>
       </div>
     )
