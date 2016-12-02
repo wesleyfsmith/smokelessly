@@ -74,7 +74,7 @@ class CartridgePicker extends TrackerReact(React.Component) {
             {this.state[category][option]}
           </h1>
         </div>
-        <div className="col-xs-5">
+        <div className="col-xs-4">
           <p>
             {name}
           </p>
@@ -88,7 +88,7 @@ class CartridgePicker extends TrackerReact(React.Component) {
       <div className="row">
         <div className="col-md-12">
           <h3 className="text-center">
-            Pick Any {this.numberRemaining.get()}
+            2. Pick Any {this.numberRemaining.get()}
           </h3>
 
           <h6>
@@ -106,7 +106,7 @@ class CartridgePicker extends TrackerReact(React.Component) {
           {this.renderOil('CBD to THC ratio blen 1:1', 'CBD Vape Oils', '3')}
 
           <h6>
-            Specialty Falvor Vape Oils
+            Specialty Flavor Vape Oils
           </h6>
           {this.renderOil('50% THC', 'Specialty Flavor Vape Oils', '1')}
           {this.renderOil('25% THC', 'Specialty Flavor Vape Oils', '2')}

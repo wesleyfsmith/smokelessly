@@ -37,7 +37,7 @@ Tracker.autorun(() => {
 });
 
 
-import HomePage from '/client/home.jsx';
+import HomePage from '/imports/ui/screens/home.jsx';
 FlowRouter.route('/', {
   name: 'home',
   action(params, queryParams) {
@@ -45,7 +45,44 @@ FlowRouter.route('/', {
   }
 });
 
-import Dashboard from '/client/dasboard.jsx';
+import Transition1 from '/imports/ui/screens/transition1';
+FlowRouter.route('/transition1', {
+  name: 'home',
+  action(params, queryParams) {
+    mount(Transition1);
+  }
+});
+
+import Step2 from '/imports/ui/screens/step2';
+FlowRouter.route('/step2', {
+  name: 'home',
+  action(params, queryParams) {
+    mount(Step2);
+  }
+});
+
+FlowRouter.route('/transition2', {
+  name: 'home',
+  action(params, queryParams) {
+    mount(HomePage);
+  }
+});
+
+FlowRouter.route('/step3', {
+  name: 'home',
+  action(params, queryParams) {
+    mount(HomePage);
+  }
+});
+
+FlowRouter.route('/transition3', {
+  name: 'home',
+  action(params, queryParams) {
+    mount(HomePage);
+  }
+});
+
+import Dashboard from '/imports/ui/screens/dasboard.jsx';
 FlowRouter.route('/dashboard', {
   name: 'dashboard',
   action(params, queryParams) {

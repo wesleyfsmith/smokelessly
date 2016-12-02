@@ -11,16 +11,33 @@ class Subscription extends TrackerReact(React.Component) {
       return '$49.95';
     }
     if (subscriptionLevel === 2) {
-      return '$79.95';
+      return '$84.94';
     }
     if (subscriptionLevel === 3) {
-      return '$115.95';
+      return '$118.95';
     }
     if (subscriptionLevel === 4) {
       return '$145.95';
     }
 
   }
+
+  calculateAverage() {
+    const subscriptionLevel = Session.get('subscription');
+    if (subscriptionLevel === 1) {
+      return 49.95;
+    }
+    if (subscriptionLevel === 2) {
+      return 84.94 / 2;
+    }
+    if (subscriptionLevel === 3) {
+      return 118.95 / 3;
+    }
+    if (subscriptionLevel === 4) {
+      return (145.95 / 4).toFixed(2);
+    }
+  }
+
   incrementSubscription(increase) {
 
     const currentValue = Session.get('subscription');
@@ -32,8 +49,12 @@ class Subscription extends TrackerReact(React.Component) {
       Session.set('subscription', Session.get('subscription') - 1);
     }
   }
-  images() {
-
+  plural() {
+    if (Session.get('subscription') === 1) {
+      return '';
+    } else {
+      return 's';
+    }
   }
   render () {
     return (
@@ -43,11 +64,14 @@ class Subscription extends TrackerReact(React.Component) {
         </div>
         <div className="col-xs-6 text-center">
           <h4>
-            {Session.get('subscription') + ' Cartridges'}
+            {Session.get('subscription') + ' Cartridge' + this.plural() + ' per month'}
           </h4>
           <h3>
             {this.price()}
           </h3>
+          <p>
+            AVG = {this.calculateAverage()}
+          </p>
         </div>
         <div className="col-xs-3">
           <a onClick={() => this.incrementSubscription(true)} className="btn btn-success btn-block"><h1 style={{marginTop: '11px'}}>+</h1></a>
