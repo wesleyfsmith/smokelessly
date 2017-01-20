@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import AOS from 'aos';
 import NavBar from '/client/navbar.jsx';
 import SignUp from '/client/signup.jsx';
-import Subscription from '/client/home.subscription.jsx';
+import SubscriptionLevel from '/client/home_sub_level';
 
 const signUpSchema = new SimpleSchema({
   email: {
@@ -69,104 +69,38 @@ class Home extends React.Component {
         <NavBar/>
         <div className="container-fluid splash" >
           <div className="row">
-            <div className="col-md-12">
+            <div className="col-md-6">
               {this.renderSpace()}
                 <h1 className="text-center">
-                  <div data-aos-delay="200" data-aos="fade-in">More high.</div> <div data-aos-delay="500" data-aos="fade-in">Less hassle.</div>
+                  <div data-aos-delay="200" data-aos="fade-in">The easiest way to get your vape cartridges.</div>
                 </h1>
-              <h4 className="text-center" data-aos-delay="700" data-aos="fade-in">
-                Discreet
-              </h4>
-              <h4 className="text-center" data-aos-delay="700" data-aos="fade-in">
-                Convenient
-              </h4>
-              <h4 className="text-center" data-aos-delay="700" data-aos="fade-in">
-                Premium Vape Cartridges
-              </h4>
+                <a className="btn btn-block btn-success">
+                  Enroll Now
+                </a>
+            </div>
+            <div className="col-md-12">
               {this.renderSpace()}
             </div>
           </div>
         </div>
+
         <div className="container">
+
           <div className="row">
-            <div className="col-md-12">
-              <h2 data-aos="fade-up" className="text-center">
-                How it works
+            <div className="col-md-8 col-md-offset-2 text-center">
+              <h2>
+                How It Works
               </h2>
-              <h6 data-aos="fade-up">
-                Our pure cannabis oils are selected, extracted, distilled, or mixed to produce rich concentrations of cannabinoids and terpenes. We create cleaner, safer varieties of great tasting oiis that you’ll look forward to receiving.
-              </h6>
-              <br></br>
-              <br></br>
-            </div>
-            <div className="col-md-4" data-aos-delay="200" data-aos="fade-in">
-              <p className="text-center">
-                <i className="fa fa-4x fa-leaf green-text"></i>
+              <p>
+                We have a geniune passion for our products and want to make it easy for you to select, purchase and receieve your favorite spliffin vape cartridges.
               </p>
-              <h4 className="text-center">
-                Skip the dispensary
-              </h4>
-              <h6>
-                Avoid trips to shops and receive yoru subscriptions at home.
-              </h6>
+              <hr></hr>
             </div>
-            <div className="col-md-4" data-aos-delay="400" data-aos="fade-in">
-              <p className="text-center">
-                <i className="fa fa-4x fa-mobile"></i>
-              </p>
-              <h4 className="text-center">
-                Pick your cartridges
-              </h4>
-              <h6>
-                Choose from a variety of California's best, solvent free cartridges.
-              </h6>
-            </div>
-            <div className="col-md-4" data-aos-delay="600" data-aos="fade-in">
-              <p className="text-center">
-                <i className="fa fa-4x fa-heart red-text"></i>
-              </p>
-              <h4 className="text-center">
-                Online Convenience
-              </h4>
-              <h6>
-                Customize your orders to your personal tastes.
-              </h6>
-            </div>
-            {this.smallerSpace()}
           </div>
-        </div>
 
-        <div className="container">
-          <div className="row text-center">
-            <div className="col-md-12">
-              <h3 className="text-center" data-aos="fade-up">
-                Choose the monthly cartridge level you want
-              </h3>
-              <br></br>
-              <br></br>
-              <br></br>
-              <Subscription/>
-            </div>
-            {this.smallerSpace()}
-          </div>
-        </div>
+          <SubscriptionLevel/>
 
 
-
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 col-md-offset-2" data-aos="fade-in">
-              <div className="well well-lg">
-                <h3 className="text-center">
-                  You're almost done. Create an account to complete your checkout.
-                </h3>
-                <SignUp/>
-              </div>
-
-            </div>
-
-            {this.smallerSpace()}
-          </div>
         </div>
 
 
